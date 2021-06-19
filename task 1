@@ -1,0 +1,44 @@
+تصميم دائرة بعدد 5 محركات تعمل بزاوية 90 درجة  
+تتصل 5 محركات مع دائرة اوردوينو و تعمل بزاوية 90 درجة لمده تتراوح الى 500 ملي سكند بشكل متتابع >
+الكود : 
+#include <Servo.h>
+
+int p = 0;
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+Servo servo5;
+
+void setup()
+{
+  servo1.attach(3);
+  servo2.attach(6);
+  servo3.attach(9);
+  servo4.attach(10);
+  servo5.attach(11);
+
+}
+
+void loop()
+{
+  for (p = 0; p == 90; p += 1) {
+    servo1.write(p);
+    servo2.write(p);
+    servo3.write(p);
+    servo4.write(p);
+    servo5.write(p);
+    delay(500); 
+  }
+  for (p = 90; p >= 0; p -= 1) {
+    servo1.write(p);
+    servo2.write(p);
+    servo3.write(p);
+    servo4.write(p);
+    servo5.write(p);
+    delay(500); 
+  }
+}
+
+الرابط الخاص بالدائرة : 
+https://www.tinkercad.com/things/dv9QNwU3G33-neat-snicket-kup/editel?sharecode=dNQCRYOqdTavgYd2Yj6P4KVxO04NM4NgU3SmUfWcOQ8 
